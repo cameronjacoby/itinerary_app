@@ -193,7 +193,7 @@ a:focus, a:hover {
   padding: 20px;
 }
 .itinerary-item:last-child {
-  border-bottom: 1px solid #ebeef0;
+  border-bottom: none;
 }
 .itinerary-item:focus,
 .itinerary-item:hover {
