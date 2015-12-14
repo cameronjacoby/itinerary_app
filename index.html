@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap css -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- font-awesome -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <title>Itinerary App</title>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-bottom mobile-show">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="javascript:void(0)" class="toggle" data-toggle="itinerary-list">
+            <div class="mobile-icon"><i class="fa fa-list"></i></div>
+            <div>List</div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="toggle" data-toggle="map-container">
+            <div class="mobile-icon"><i class="fa fa-map"></i></div>
+            <div>Map</div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <div class="mobile-icon"><i class="fa fa-bell"></i></i></div>
+            <div>Notifications</div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <div class="mobile-icon"><i class="fa fa-user"></i></i></div>
+            <div>Me</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-default mobile-hide">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li><a href="javascript:void(0)" class="active">Dashboard</a></li>
+        <li><a href="javascript:void(0)">All Trips</a></li>
+      </ul>
+      <div class="nav-logo">
+        <i class="fa fa-map"></i>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="javascript:void(0)" class="nav-profile-link">
+            <img src="images/profile.png" width="30">
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="itinerary-container">
+          <div class="trip-header">
+            <div>Your Upcoming Trip to</div>
+            <div class="destination">London</div>
+          </div>
+          <div class="day-block">
+            <a href="javascript:void(0)" class="edit-day">Edit</a>
+            <a href="javascript:void(0)" class="date-viewing">
+              <div class="mm-dd">
+                <div class="mm text-extra-muted">Mar</div>
+                <div class="dd">7</div>
+              </div>
+              <div class="day">Today <i class="fa fa-caret-down"></i></div>
+            </a>
+            <a href="javascript:void(0)" class="add-item">&#43;</a>
+          </div>
+          <div class="itinerary-list toggle-items" id="itinerary-list">
+            <script type="text/x-handlebars-template" id="item-template">
+              {{#each items}}
+                <a href="javascript:void(0)" class="itinerary-item">
+                  <p class="normal">{{name}}</p>
+                  <p class="small">{{address}}</p>
+                </a>
+              {{/each}}
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="map-container mobile-hide toggle-items" id="map-container">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jquery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- handlebars -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+
+  <!-- google maps -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
